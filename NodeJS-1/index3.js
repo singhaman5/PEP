@@ -1,9 +1,17 @@
-import express from 'express'
-const app = express()
-app.listen(8080, () => {
-    console.log("Server started");
+import express from 'express';
+
+const app = express();
+
+app.get('/', (req, res) => {
+    console.log(req.url);
+    res.send('Response from server for /');
 });
-app.get("/",(req,res)=>{
-    console.log(req.url)
-    res.send("Response from server for /home")
-})
+
+app.get('/home', (req, res) => {
+    console.log(req.url);
+    res.send('Response from server for /home');
+});
+
+app.listen(8080, () => {
+    console.log('Server started ');
+});
