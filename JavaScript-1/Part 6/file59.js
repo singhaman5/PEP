@@ -1,24 +1,23 @@
 // student = {
-//     name: "Nikhil",
-//     display : function(){
+//     name:"Nikhil",
+//     display:function(){
 //         console.log(this.name)
 //     }
 // }
 // student.display()
 
 // student = {
-//     name: "Anshul",
-//     display : ()=> {
-//         console.log(this.name)
-//     }
-// }
-// student.display
-
+//   name: "Nikhil",
+//   display: () => {
+//     console.log(this.name);
+//   },
+// };
+// student.display();
 
 student = {
-    name: "Anshul",
-    display : () {
-        console.log(this.name)
-    },
-}
-student.display()
+  name: "Nikhil",
+  display() {
+    console.log(this.name);
+  },
+};
+student.display();
