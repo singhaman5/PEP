@@ -2,6 +2,10 @@ import express from 'express';
 
 const app = express();
 
+app.listen(8080, () => {
+    console.log('Server started ');
+});
+
 app.get('/', (req, res) => {
     console.log(req.url);
     res.send('Response from server for /');
@@ -12,6 +16,7 @@ app.get('/home', (req, res) => {
     res.send('Response from server for /home');
 });
 
-app.listen(8080, () => {
-    console.log('Server started ');
+app.get('/home/page1', (req, res) => {
+    console.log(req.url);
+    res.send('Response from server for /home/page1');
 });
