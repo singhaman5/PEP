@@ -1,10 +1,19 @@
 import express from 'express';
 const app=express();
-app.listen(8080);
+app.listen(8080, () => {
+    console.log("Server Started......");
+});
+
+const greet = (req,res,next) => {
+    console.log("Hello World")
+    next()
+};
+app.use(greet)
+
 const users=[
     {id:1,name:"john",email:"john@gmail.com",role:"student"},
-    {id:2,name:"john",email:"john@gmail.com",role:"student"},
-    {id:3,name:"john",email:"john@gmail.com",role:"student"},
+    {id:2,name:"cathy",email:"cathy@gmail.com",role:"developer"},
+    {id:3,name:"aman",email:"aman@gmail.com",role:"client"},
 
 ]
 app.use(express.json());  // to parse the json data from the request body
