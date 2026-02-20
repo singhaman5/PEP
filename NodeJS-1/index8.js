@@ -28,16 +28,10 @@ app.post("/",(req,res)=>{
     res.json(user);
 })
 
-// delete user
-// app.delete("/:id",(req,res)=>{
-//     const id = Number(req.params.id);
-//     const index = users.findIndex(u => u.id === id);
-//     if(index === -1){
-//         return res.status(404).json({message:"User not found"});
-//     }
-//     users.splice(index,1);
-//     res.json({message:"User deleted"});
-// })
+app.delete("/:id", (reuuest, response,) => {
+    users = users.filter((user) => user.id != Number(req.params.id))
+    res.json(users)
+})
 
 
 
